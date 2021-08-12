@@ -1,0 +1,62 @@
+/* =================================
+    Element Styles
+================================= */
+/* ==== Base Selectors ==== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0 15px;
+}
+
+fieldset {
+    border: none;
+    border-top: solid 2px #444;
+}
+
+legend {
+    position: relative;
+    margin: 20px 0;
+}
+
+/* ==== Class Selectors ==== */
+
+.main-header {
+    margin: 0;
+    text-align: center;
+}
+
+.main-header h1 {
+    padding: 25px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: #fff;
+    background: #444;
+}
+
+.signup-intro {
+    padding: 25px 0 30px;
+    margin: 0 15px 5px;
+    border-bottom: solid 4px #444;
+}
+
+/* ==== ID Selectors ==== */
+
+
+
+/* =================================
+    Layout Styles
+================================= */
+
+
+
+/* =================================
+    Media Queries
+================================= */
+
+
+
