@@ -1,4 +1,9 @@
 /* =================================
+    Font Stack Reminder
+    font-family: 'Merriweather', serif;
+================================= */
+
+/* =================================
     Element Styles
 ================================= */
 /* ==== Base Selectors ==== */
@@ -9,18 +14,61 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
 main {
     margin: 0 15px;
 }
 
 fieldset {
     border: none;
-    border-top: solid 2px #444;
 }
 
 legend {
-    position: relative;
     margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+label {
+    font-size: .9rem;
+    text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 20px 15px;
+    margin: 10px auto 15px;
+    font-size: .9rem;
+    font-family: 'Merriweather', serif;
+    border: none;
+    border-radius: 5px;
+    background: #e8e8e8;
+    color: #333;
+}
+
+input[class="zip"] {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+input[placeholder="Required"]::placeholder {
+    font-size: .75rem;
+    font-style: italic;
+    text-align: right;
+    color: #bbb;
 }
 
 /* ==== Class Selectors ==== */
@@ -32,16 +80,27 @@ legend {
 
 .main-header h1 {
     padding: 25px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-transform: uppercase;
     color: #fff;
-    background: #444;
+    background: #333;
 }
 
 .signup-intro {
     padding: 25px 0 30px;
     margin: 0 15px 5px;
-    border-bottom: solid 4px #444;
+    border-bottom: solid 4px #333;
+}
+
+.signup-intro p {
+    margin-top: 10px;
+    font-size: .85rem;
+    color: #bbb;
+}
+
+.content-border {
+    margin-bottom: 20px;
+    border-top: solid 2px #333;
 }
 
 /* ==== ID Selectors ==== */
