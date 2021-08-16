@@ -21,9 +21,14 @@ body {
     color: #333;
 }
 
-h2 {
-    font-size: 1.2em;
+h2,
+legend {
+    font-size: 1.2rem;
     font-weight: 700;
+}
+
+legend {
+    margin-bottom: 25px;
 }
 
 main {
@@ -34,29 +39,20 @@ fieldset {
     border: none;
 }
 
-legend {
-    margin: 20px 0;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
 label {
     font-size: .9rem;
-    text-transform: capitalize;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea[id="other-topics"] {
-    width: 100%;
-    padding: 20px 15px;
-    font-size: .9rem;
-    border: none;
-    border-radius: 5px;
-    background: #e8e8e8;
-    color: #333;
+input::placeholder {
+    text-align: right;
+    font-size: .75rem;
+    font-style: italic;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline-color: #00446e;
 }
 
 input[type="text"],
@@ -64,69 +60,55 @@ input[type="email"],
 input[type="tel"],
 select,
 textarea[id="other-topics"],
-input[type="checkbox"],
-input[type="radio"],
 button[type="submit"] {
-    outline-color: #004675;
+    width: 100%;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-select {
-    margin: 10px auto 15px;
-}
-
+select,
 textarea[id="other-topics"] {
-    height: 100px;
-    margin: 15px auto 25px;
+    padding: 20px;
+    margin: 15px auto 20px;
+    font-size: .9rem;
+    border: none;
+    border-radius: 5px;
+    outline-color: #00446e;
+    background: #e6e6e6;
+    color: #333;
 }
 
 input[class="zip"] {
-    width: 50%;
+    width: 150px;
     margin-bottom: 30px;
-}
-
-input[placeholder="Required"]::placeholder {
-    font-size: .75rem;
-    font-style: italic;
-    text-align: right;
-    color: #bbb;
-}
-
-input[placeholder="Required"]:focus::placeholder {
-    padding-right: 30px;
-    color: #333;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    margin: 20px 15px 0 0;
+    margin: 20px 10px 0 0;
 }
 
-input:invalid {
-    outline-color: red;
-    border: solid 2px red;
-  }
-
-input:focus:invalid {
-    background: url("../svg/exclamation-triangle-solid.svg") no-repeat 95% 50% lightsalmon;
-    background-size: 25px;
+textarea[id="other-topics"] {
+    height: 100px;
 }
 
 button[type="submit"] {
-    width: 100%;
     padding: 20px;
-    margin-bottom: 25px;
     font-size: 1.2rem;
     font-weight: 700;
     border: none;
     border-radius: 5px;
+    background: #00bec4;
     color: #fff;
-    background: #3cc2c0;
 }
 
 /* ==== Class Selectors ==== */
+
+.contact-information,
+.newsletter {
+    display: flexbox;
+}
 
 .main-header {
     margin: 0;
@@ -163,7 +145,7 @@ button[type="submit"] {
 }
 
 .main-footer {
-    margin-bottom: 25px;
+    margin: 25px auto;
     font-size: .85rem;
     font-style: italic;
     text-align: center;
@@ -175,14 +157,15 @@ button[type="submit"] {
 
 
 /* =================================
-    Layout Styles
-================================= */
-
-
-
-/* =================================
     Media Queries
 ================================= */
 
+@media screen and (min-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
 
-
+    .signup-intro {
+        padding: 65px 0 50px;
+    }
+}
