@@ -12,6 +12,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Merriweather', serif;
 }
 
 body {
@@ -47,16 +48,38 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-select {
+select,
+textarea[id="other-topics"] {
     width: 100%;
     padding: 20px 15px;
-    margin: 10px auto 15px;
     font-size: .9rem;
-    font-family: 'Merriweather', serif;
     border: none;
     border-radius: 5px;
     background: #e8e8e8;
     color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea[id="other-topics"],
+input[type="checkbox"],
+input[type="radio"],
+button[type="submit"] {
+    outline-color: #004675;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    margin: 10px auto 15px;
+}
+
+textarea[id="other-topics"] {
+    height: 100px;
+    margin: 15px auto 25px;
 }
 
 input[class="zip"] {
@@ -69,6 +92,38 @@ input[placeholder="Required"]::placeholder {
     font-style: italic;
     text-align: right;
     color: #bbb;
+}
+
+input[placeholder="Required"]:focus::placeholder {
+    padding-right: 30px;
+    color: #333;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 20px 15px 0 0;
+}
+
+input:invalid {
+    outline-color: red;
+    border: solid 2px red;
+  }
+
+input:focus:invalid {
+    background: url("../svg/exclamation-triangle-solid.svg") no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: #3cc2c0;
 }
 
 /* ==== Class Selectors ==== */
@@ -95,12 +150,24 @@ input[placeholder="Required"]::placeholder {
 .signup-intro p {
     margin-top: 10px;
     font-size: .85rem;
-    color: #bbb;
+    color: #aaa;
 }
 
 .content-border {
     margin-bottom: 20px;
     border-top: solid 2px #333;
+}
+
+.bottom {
+    margin-bottom: 30px;
+}
+
+.main-footer {
+    margin-bottom: 25px;
+    font-size: .85rem;
+    font-style: italic;
+    text-align: center;
+    color: #aaa;
 }
 
 /* ==== ID Selectors ==== */

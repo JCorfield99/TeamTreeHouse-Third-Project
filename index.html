@@ -103,18 +103,28 @@
                 <fieldset class="newsletter">
                     <legend>Newsletter</legend>
                     <label>Select the newsletters you would like to receive</label><br>
-                    <input type="checkbox" id="html-news" value="html-news" name="user_newsletter">
-                    <label for="html-news">HTML News</label><br>
-                    <input type="checkbox" id="css-news" value="css-news" name="user_newsletter">
-                    <label for="css-news">CSS News</label><br>
-                    <input type="checkbox" id="javascript-news" value="javascript-news" name="user_newsletter">
-                    <label for="javascript-news">Javascript News</label><br>
+                    <div>
+                        <input type="checkbox" id="html-news" value="html-news" name="user_newsletter">
+                        <label for="html-news">HTML News</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="css-news" value="css-news" name="user_newsletter">
+                        <label for="css-news">CSS News</label><br>
+                    </div>
+                    <div class="bottom">
+                        <input type="checkbox" id="javascript-news" value="javascript-news" name="user_newsletter">
+                        <label for="javascript-news">Javascript News</label><br>
+                    </div>
 
                     <label>Newsletter format</label><br>
-                    <input type="radio" id="html" value="html" name="user-newsletter-format">
-                    <label for="html">HTML</label><br>
-                    <input type="radio" id="plain-text" value="plain-text" name="user-newsletter-format">
-                    <label for="plain-text">Plain text</label><br>
+                    <div>
+                        <input type="radio" id="html" value="html" name="user-newsletter-format">
+                        <label for="html">HTML</label><br>
+                    </div>
+                    <div class="bottom">
+                        <input type="radio" id="plain-text" value="plain-text" name="user-newsletter-format">
+                        <label for="plain-text">Plain text</label><br>
+                    </div>
 
                     <label for="other-topics">Other topics you'd like to hear about</label><br>
                     <textarea id="other-topics" name="user-other-topics"></textarea><br>
