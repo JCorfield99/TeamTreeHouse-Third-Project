@@ -81,7 +81,6 @@ textarea[id="other-topics"] {
 
 input[class="zip"] {
     width: 150px;
-    margin-bottom: 30px;
 }
 
 input[type="checkbox"],
@@ -105,10 +104,10 @@ button[type="submit"] {
 
 /* ==== Class Selectors ==== */
 
-.contact-information,
+/* .contact-information,
 .newsletter {
-    display: flexbox;
-}
+    display: flex;
+} */
 
 .main-header {
     margin: 0;
@@ -140,6 +139,10 @@ button[type="submit"] {
     border-top: solid 2px #333;
 }
 
+.content-border:nth-of-type(2) {
+    margin-top: 10px;
+}
+
 .bottom {
     margin-bottom: 30px;
 }
@@ -161,11 +164,63 @@ button[type="submit"] {
 ================================= */
 
 @media screen and (min-width: 768px) {
+    body,
+    .contact-container,
+    .zip-container {
+        display: flex;
+    }
+
+    body {
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
     h2 {
         font-size: 1.5rem;
     }
 
+    main,
+    .signup-intro,
+    .main-footer {
+        width: 100%;
+        max-width: calc(768px - 30px);
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
     .signup-intro {
         padding: 65px 0 50px;
+    }
+
+    .contact-container {
+        justify-content: space-between;
+    }
+
+    .contact-container label {
+        align-self: center;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    .zip-container {
+        width: 75%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    input[class="zip"] {
+        width: 200px;
+        justify-self: flex-start;
+    }
+
+    .content-border {
+        margin-bottom: 50px;
+    }
+
+    .content-border:nth-of-type(2) {
+        margin-top: 30px;
     }
 }

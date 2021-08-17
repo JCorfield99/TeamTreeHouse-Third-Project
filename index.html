@@ -24,32 +24,32 @@
                 <div class="content-border"></div>
                 <fieldset class="contact-information">
                     <legend>Contact Information</legend>
-                    <div>
+                    <div class="contact-container">
                         <label for="name">Full Name</label><br class="mobile-size">
                         <input type="text" id="name" name="user_name" placeholder="Required" required>
                     </div>
 
-                    <div>
+                    <div class="contact-container">
                         <label for="email">Email</label><br class="mobile-size">
                         <input type="email" id="email" name="user_email" placeholder="Required" required>
                     </div>
 
-                    <div>
+                    <div class="contact-container">
                         <label for="phone">Phone Number</label><br class="mobile-size">
                         <input type="tel" id="phone" name="user_phone">
                     </div>
 
-                    <div>
+                    <div class="contact-container">
                         <label for="address1">Street Address</label><br class="mobile-size">
                         <input type="text" id="address1" name="user_address1">
                     </div>
 
-                    <div>
+                    <div class="contact-container">
                         <label for="address2">City</label><br class="mobile-size">
                         <input type="text" id="address2" name="user_address2">
                     </div>
 
-                    <div>
+                    <div class="contact-container">
                         <label for="address3">State</label><br class="mobile-size">
                         <select id="address3" name="user_address3">
                             <option value="" disabled selected hidden>Choose State</option>
@@ -106,9 +106,11 @@
                         </select>
                     </div>
 
-                    <div>
+                    <div class="contact-container">
                         <label for="zip">Zip Code</label><br class="mobile-size">
-                        <input type="text" id="zip" name="user_zip" class="zip">
+                        <div class="zip-container">
+                            <input type="text" id="zip" name="user_zip" class="zip">
+                        </div>
                     </div>
                 </fieldset>
 
