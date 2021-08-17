@@ -7,7 +7,6 @@
     Element Styles
 ================================= */
 /* ==== Base Selectors ==== */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -103,12 +102,6 @@ button[type="submit"] {
 }
 
 /* ==== Class Selectors ==== */
-
-/* .contact-information,
-.newsletter {
-    display: flex;
-} */
-
 .main-header {
     margin: 0;
     text-align: center;
@@ -155,9 +148,20 @@ button[type="submit"] {
     color: #aaa;
 }
 
-/* ==== ID Selectors ==== */
+/* ==== Pseudo Selectors ==== */
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline-color: #00bec4;
+    background: #333;
+    color: #fff;
+}
 
+button:focus {
+    outline-color: #00bec4;
+    background: #00446e;
+}
 
 /* =================================
     Media Queries
