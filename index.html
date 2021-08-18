@@ -25,32 +25,31 @@
                 <fieldset class="contact-information">
                     <legend>Contact Information</legend>
                     <div class="contact-container">
-                        <label for="name">Full Name</label><br class="mobile-size">
                         <input type="text" id="name" name="user_name" placeholder="Required" required>
+                        <label for="name">Full Name</label><br class="mobile-size">
                     </div>
 
                     <div class="contact-container">
-                        <label for="email">Email</label><br class="mobile-size">
                         <input type="email" id="email" name="user_email" placeholder="Required" required>
+                        <label for="email">Email</label><br class="mobile-size">
                     </div>
 
                     <div class="contact-container">
+                        <input type="tel" id="phone" name="user_phone" placeholder="&lpar;555&rpar; 555-1234">
                         <label for="phone">Phone Number</label><br class="mobile-size">
-                        <input type="tel" id="phone" name="user_phone">
                     </div>
 
                     <div class="contact-container">
+                        <input type="text" id="address1" name="user_address1" placeholder="15&comma; Coding View">
                         <label for="address1">Street Address</label><br class="mobile-size">
-                        <input type="text" id="address1" name="user_address1">
                     </div>
 
                     <div class="contact-container">
+                        <input type="text" id="address2" name="user_address2" placeholder="New York City">
                         <label for="address2">City</label><br class="mobile-size">
-                        <input type="text" id="address2" name="user_address2">
                     </div>
 
                     <div class="contact-container">
-                        <label for="address3">State</label><br class="mobile-size">
                         <select id="address3" name="user_address3">
                             <option value="" disabled selected hidden>Choose State</option>
                             <option value="alabama">Alabama</option>
@@ -104,13 +103,14 @@
                             <option value="wisconsin">Wisconsin</option>
                             <option value="wyoming">Wyoming</option>
                         </select>
+                        <label for="address3">State</label><br class="mobile-size">
                     </div>
 
                     <div class="contact-container">
-                        <label for="zip">Zip Code</label><br class="mobile-size">
                         <div class="zip-container">
-                            <input type="text" id="zip" name="user_zip" class="zip">
+                            <input type="text" id="zip" name="user_zip" class="zip" placeholder="90210">
                         </div>
+                        <label for="zip">Zip Code</label><br class="mobile-size">
                     </div>
                 </fieldset>
 
@@ -147,7 +147,7 @@
 
                     <div>
                         <label for="other-topics">Other topics you'd like to hear about</label>
-                        <textarea id="other-topics" name="user-other-topics"></textarea>
+                        <textarea id="other-topics" name="user-other-topics" placeholder="eg&colon; Python"></textarea>
                     </div>
 
                     <button type="submit">Sign Up</button>

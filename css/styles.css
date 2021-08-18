@@ -34,8 +34,14 @@ main {
     margin: 0 15px;
 }
 
+form {
+    background: #e6e6e6;
+    border-radius: 0 0 5px 5px;
+}
+
 fieldset {
     border: none;
+    padding: 10px;
 }
 
 label {
@@ -46,12 +52,6 @@ input::placeholder {
     text-align: right;
     font-size: .75rem;
     font-style: italic;
-}
-
-input:focus,
-textarea:focus,
-button:focus {
-    outline-color: #00446e;
 }
 
 input[type="text"],
@@ -69,17 +69,18 @@ input[type="tel"],
 select,
 textarea[id="other-topics"] {
     padding: 20px;
-    margin: 15px auto 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
     font-size: .9rem;
     border: none;
     border-radius: 5px;
     outline-color: #00446e;
-    background: #e6e6e6;
+    background: #ccc;
     color: #333;
 }
 
 input[class="zip"] {
-    width: 150px;
+    width: 50%;
 }
 
 input[type="checkbox"],
@@ -102,6 +103,12 @@ button[type="submit"] {
 }
 
 /* ==== Class Selectors ==== */
+.contact-container,
+.zip-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .main-header {
     margin: 0;
     text-align: center;
@@ -150,6 +157,15 @@ button[type="submit"] {
 
 /* ==== Pseudo Selectors ==== */
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    transition: .75s;
+}
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -163,20 +179,39 @@ button:focus {
     background: #00446e;
 }
 
+:required:valid + label::after {
+    content: url(../svg/check-circle-solid.svg);
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: auto 10px;
+}
+
+:required:invalid + label::after {
+    content: url(../svg/exclamation-triangle-solid.svg);
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: auto 10px;
+}
+
 /* =================================
     Media Queries
 ================================= */
 
 @media screen and (min-width: 768px) {
-    body,
-    .contact-container,
-    .zip-container {
+    body {
         display: flex;
     }
 
     body {
         margin: 0 auto;
         flex-direction: column;
+    }
+
+    .contact-container,
+    .zip-container {
+        flex-direction: row;
     }
 
     h2 {
@@ -205,6 +240,11 @@ button:focus {
         align-self: center;
     }
 
+    label {
+        margin-right: auto;
+        order: 1;
+    }
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
@@ -213,11 +253,12 @@ button:focus {
         width: 75%;
         margin-right: 0;
         margin-left: 0;
+        order: 2;
     }
 
     input[class="zip"] {
-        width: 200px;
-        justify-self: flex-start;
+        width: 25%;
+        justify-self: flex-end;
     }
 
     .content-border {
